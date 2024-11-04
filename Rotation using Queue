@@ -1,0 +1,12 @@
+from queue import Queue
+s1=input()
+k=int(input())
+q=Queue()
+for i in range (len(s1)):
+    q.put(s1[i])
+for i in range (k):
+    q.put(q.get())
+result=""
+for i in range (len(s1)):
+    result+=q.get()
+print(result)
